@@ -5,7 +5,8 @@ const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
 
-app.set('port', (process.env.PORT || 3000))
+app.set('port', process.env.PORT || 3000);
+app.set('ip', process.env.IP || "127.0.0.1");
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
